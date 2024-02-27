@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,13 +23,13 @@ public class CarPage extends BasePage {
 	@FindBy(xpath = "//a[@class='btn-proceed']")
 	WebElement buycar;
 
-	@FindBy(xpath = "//span[@id='spn4']")
+	@FindBy(xpath = "//span[@id='spn2']")
 	WebElement city;
 
-	@FindBy(xpath = "//span[normalize-space()='MH14']")
+	@FindBy(xpath = "//span[normalize-space()='DL12']")
 	WebElement RegNo;
 
-	@FindBy(xpath = "//*[@id='dvMake']/div/ul/div/li[6]/span")
+	@FindBy(xpath = "//span[contains(@class,'honda')]")
 	WebElement carCompany;
 
 	@FindBy(xpath = "//b[normalize-space()='CIVIC HYBRID']")
@@ -58,12 +59,13 @@ public class CarPage extends BasePage {
 	@FindBy(xpath = "//span[@id='error_car_number']")
 	WebElement errormsg;
 
-	public void getCarInsurance() throws InterruptedException {
+	public void getCarInsurance() {
 		carlogo.click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='btn-proceed']")));
-		buycar.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='btn-proceed']")));
+		// buycar.click();
+		Actions act = new Actions(driver);
+		act.moveToElement(buycar).build().perform();
 
 	}
 
@@ -73,11 +75,15 @@ public class CarPage extends BasePage {
 	}
 
 	public void getCity() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='spn4']")));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id='spn4']")));
+
 		city.click();
+//		Actions act = new Actions(driver);
+//		act.moveToElement(city).build().perform();
 		// selecting dlno
 		RegNo.click();
+//		act.moveToElement(RegNo).build().perform();
 
 	}
 

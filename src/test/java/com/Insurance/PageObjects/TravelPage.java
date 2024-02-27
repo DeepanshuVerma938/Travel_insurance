@@ -147,7 +147,9 @@ public class TravelPage extends BasePage {
 	public void clickNextButton() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='travel_main_cta']")));
-		nextbutton.click();
+		// nextbutton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", nextbutton);
 
 	}
 

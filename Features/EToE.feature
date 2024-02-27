@@ -16,7 +16,8 @@ Feature: Insurance for students
     Examples:
     	|  country  |  mobilenumber |
     	| Thailand  |   6396527359  |
-    
+    	
+  @sanity 
   Scenario: Car Insurance Plan
     When user click on policybazaar logo
     And user click on car insurance and redirected to cipolicybazaar webpage
