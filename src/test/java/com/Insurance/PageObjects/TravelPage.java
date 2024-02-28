@@ -228,10 +228,9 @@ public class TravelPage extends BasePage {
 	public void applyFilter() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		studentPlan.click();
-
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='modal-root']/div/div/span")));
 		driver.findElement(By.xpath("//*[@id='modal-root']/div/div/span")).click();
+		studentPlan.click();
 
 		checkTraveller1.click();
 		checkTraveller2.click();
