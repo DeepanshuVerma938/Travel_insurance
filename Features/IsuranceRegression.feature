@@ -51,7 +51,7 @@ Feature: Regression testing for policybazaar site
   @regression
   Scenario: Negative steps for Home Plan Insurance
     Given user navigates to Home Insurance plan page
-    When user enters name and invalid number
+    When user gives name and number as invalid
     Then user must see the invalid message
     When clicked on view plan & continue with this number
     Then user user should not navigated to external page

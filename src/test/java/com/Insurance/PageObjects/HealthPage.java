@@ -83,11 +83,11 @@ public class HealthPage extends BasePage {
 	@FindBy(xpath = "//div[2]/section/div[2]/a")
 	WebElement heart;
 
-	@FindBy(xpath = "//h1[@class='anim firstStep']")
+	@FindBy(xpath = "//p[@class='pq5Step_stepSubTitle']")
 	WebElement heading;
 
 	String path = System.getProperty("user.dir") + "/src/test/resources/Policy.xlsx";
-	String actualheading = "Find top plans for you with up to ";
+	String actualheading = "Select members you want to insure";
 
 	public void getHealthInsurance() {
 

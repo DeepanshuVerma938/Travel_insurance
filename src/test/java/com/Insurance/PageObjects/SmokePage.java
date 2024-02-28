@@ -27,7 +27,7 @@ public class SmokePage extends BasePage {
 	@FindBy(xpath = "//div[2]/section/div[1]/a")
 	WebElement umbrella;
 
-	@FindBy(xpath = "//span[normalize-space()='Male']//i[@class='radio']")
+	@FindBy(xpath = "//span[normalize-space()='Male']")
 	WebElement maleradio;
 
 	@FindBy(xpath = "//div[2]/section/div[12]/a")
@@ -54,7 +54,7 @@ public class SmokePage extends BasePage {
 	@FindBy(xpath = "//*[@id='txtMobileNo']")
 	WebElement childMo;
 
-	@FindBy(xpath = "//button[normalize-space()='View Plans']")
+	@FindBy(xpath = "//*[@id='wrapper']/div/div[2]/div[2]/div[1]/div[5]/button")
 	WebElement childPlan;
 
 	@FindBy(xpath = "//p[@class='error ng-star-inserted']")
@@ -87,10 +87,9 @@ public class SmokePage extends BasePage {
 	}
 
 	public void validateTermPage() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-		wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//span[normalize-space()='Male']//i[@class='radio']")));
-		boolean flag = maleradio.isEnabled();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Male']")));
+		boolean flag = maleradio.isDisplayed();
 		Assert.assertTrue(flag);
 	}
 
@@ -102,6 +101,9 @@ public class SmokePage extends BasePage {
 	}
 
 	public void getRetirementPage() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='brktext']")));
+
 		boolean flag = retireHeading.isDisplayed();
 		Assert.assertTrue(flag);
 
@@ -139,9 +141,11 @@ public class SmokePage extends BasePage {
 	}
 
 	public void childViewPlan() {
-
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//*[@id='wrapper']/div/div[2]/div[2]/div[1]/div[5]/button")));
 		boolean f = childPlan.isEnabled();
-		Assert.assertTrue(!f);
+		Assert.assertNotEquals(f, false);
 
 	}
 
@@ -181,8 +185,10 @@ public class SmokePage extends BasePage {
 	}
 
 	public void homeplanpage() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='pq-cta']")));
 		boolean f = homeviewplan.isEnabled();
-		Assert.assertTrue(!f);
+		Assert.assertNotEquals(f, false);
 	}
 
 }

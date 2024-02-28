@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 28 15:39:19 IST 2024</td>
+<td>Started on:</td><td>Wed Feb 28 18:02:01 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1138 ms)</td>
+<tr><td>Total time:</td><td>235 seconds (235367 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,5 +67,166 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to health insurance page", "categorizing the features as smoke"</td>
+<td><div><pre>java.lang.AssertionError: expected [Find top plans for you with up to 25% discount**] but found [Find top plans for you with up to ]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.Insurance.PageObjects.HealthPage.checkhealthpage(HealthPage.java:204)
+	at com.travelInsurance.stepDefinitions.SmokeSteps.user_navigate_to_health_insurance_webpage(SmokeSteps.java:46)
+	at ✽.user  navigate to healthInsurance webpage(file:///C:/Users/2303699/eclipse-workspace/Hack/./Features/InsuranceSmoke.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace51712095", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace51712095'><pre>java.lang.AssertionError: expected [Find top plans for you with up to 25% discount**] but found [Find top plans for you with up to ]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.Insurance.PageObjects.HealthPage.checkhealthpage(HealthPage.java:204)
+	at com.travelInsurance.stepDefinitions.SmokeSteps.user_navigate_to_health_insurance_webpage(SmokeSteps.java:46)
+	at ✽.user  navigate to healthInsurance webpage(file:///C:/Users/2303699/eclipse-workspace/Hack/./Features/InsuranceSmoke.feature:13)
+</pre></div></td>
+<td>21</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to Retirement Plan", "categorizing the features as smoke"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd547fcf1e82c2250bb2ca55130bbcb4, isElementDisplayed {id=8050EF94EB6C232E3E3D6F3E3FAA0EE3_element_71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50151}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50151/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fd547fcf1e82c2250bb2ca55130bbcb4)] -&gt; xpath: //span[@class=&apos;brktext&apos;]]
+Session ID: fd547fcf1e82c2250bb2ca55130bbcb4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at com.Insurance.PageObjects.SmokePage.getRetirementPage(SmokePage.java:105)
+	at com.travelInsurance.stepDefinitions.SmokeSteps.user_should_navigate_to_retirement_plans_webpage(SmokeSteps.java:86)
+	at ✽.user should navigate to RetirementPlans webpage(file:///C:/Users/2303699/eclipse-workspace/Hack/./Features/InsuranceSmoke.feature:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace709931821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace709931821'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd547fcf1e82c2250bb2ca55130bbcb4, isElementDisplayed {id=8050EF94EB6C232E3E3D6F3E3FAA0EE3_element_71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50151}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50151/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fd547fcf1e82c2250bb2ca55130bbcb4)] -&gt; xpath: //span[@class=&apos;brktext&apos;]]
+Session ID: fd547fcf1e82c2250bb2ca55130bbcb4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy28.isDisplayed(Unknown Source)
+	at com.Insurance.PageObjects.SmokePage.getRetirementPage(SmokePage.java:105)
+	at com.travelInsurance.stepDefinitions.SmokeSteps.user_should_navigate_to_retirement_plans_webpage(SmokeSteps.java:86)
+	at ✽.user should navigate to RetirementPlans webpage(file:///C:/Users/2303699/eclipse-workspace/Hack/./Features/InsuranceSmoke.feature:37)
+</pre></div></td>
+<td>16</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to HomeInsurance page", "categorizing the features as smoke"</td>
+<td></td>
+<td>19</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to child savings plan", "categorizing the features as smoke"</td>
+<td></td>
+<td>15</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Scrolling functionality", "categorizing the features as smoke"</td>
+<td></td>
+<td>20</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Log in functionality with invalid phonenumber", "categorizing the features as smoke"</td>
+<td></td>
+<td>38</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to CarInsurance page", "categorizing the features as smoke"</td>
+<td></td>
+<td>18</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to TermLifeInsurance page", "categorizing the features as smoke"</td>
+<td></td>
+<td>16</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Log in functionality with invalid phonenumber", "categorizing the features as smoke"</td>
+<td></td>
+<td>23</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating the url of policybazaar", "categorizing the features as smoke"</td>
+<td></td>
+<td>18</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+<tr>
+<td title='com.Insurance.testRunner.testRun.runScenario()'><b>runScenario</b><br>Test class: com.Insurance.testRunner.testRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigating to FamilyInsurance Plan", "categorizing the features as smoke"</td>
+<td></td>
+<td>18</td>
+<td>com.Insurance.testRunner.testRun@6f204a1a</td></tr>
+</table><p>
 </body>
 </html>
