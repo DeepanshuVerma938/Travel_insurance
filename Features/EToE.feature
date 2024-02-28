@@ -1,5 +1,6 @@
 Feature: Insurance for students
-
+ 
+ 
   Scenario: Travel insurance plan 
     Given user navigate to policybazaar site
     When user click on travel insurance icon
@@ -17,7 +18,7 @@ Feature: Insurance for students
     	|  country  |  mobilenumber |
     	| Thailand  |   6396527359  |
     	
-  @sanity 
+   
   Scenario: Car Insurance Plan
     When user click on policybazaar logo
     And user click on car insurance and redirected to cipolicybazaar webpage
@@ -26,7 +27,7 @@ Feature: Insurance for students
     And user entered the invalid email & mobile number
     Then capture & display the error message
     
-    
+  @sanity
   Scenario:  Health Insurance Plan
     When user click on policybazaar logo
     And user click on Health insurance navigated to health page
@@ -35,5 +36,4 @@ Feature: Insurance for students
 		And user should select the city name & proceed with continue button
 		And user enters name & mobileNo & proceed with continue button
 		And user should select any previous medical history
-		And user selects health insurance is provided or not
 		Then user should capture and display different health plans

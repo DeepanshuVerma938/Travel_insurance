@@ -50,11 +50,6 @@ public class HealthInsurance {
 		hp.checkMedicalHistory();
 	}
 
-	@When("user selects health insurance is provided or not")
-	public void user_selects_health_insurance_is_provided_or_not() {
-		hp.getInsuranceOption();
-	}
-
 	@Then("user should capture and display different health plans")
 	public void user_should_capture_and_display_different_health_plans() throws IOException {
 		hp.displayHealthPlans();

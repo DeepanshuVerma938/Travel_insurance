@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\2303699\eclipse-workspace\Hack\parallelbrowser.xml</span>
+                    <span>C:\Users\2303699\eclipse-workspace\Hack\crossbrowser.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -107,23 +107,23 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\2303699\eclipse-workspace\Hack\parallelbrowser.xml</span>
+            <span class="header-content">C:\Users\2303699\eclipse-workspace\Hack\crossbrowser.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Test1&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.travelInsurance.stepDefinitions.Hooks&quot;/&gt;
+      &lt;class name=&quot;com.Insurance.testRunner.testRun&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
-  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Test2&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.travelInsurance.stepDefinitions.Hooks&quot;/&gt;
+      &lt;class name=&quot;com.Insurance.testRunner.testRun&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test2 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -196,6 +196,24 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.Insurance.testRunner.testRun</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@305a0c5f)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">609 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@4535b6d5)</span>
+                <span class="method-start">762 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">793 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

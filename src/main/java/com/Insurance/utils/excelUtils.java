@@ -119,7 +119,7 @@ public class excelUtils {
 
 		style = workBook.createCellStyle();
 
-		style.setFillForegroundColor(IndexedColors.AQUA.getIndex()); // Filling red color to the cell
+		style.setFillForegroundColor(IndexedColors.BLUE.getIndex()); // Filling red color to the cell
 		style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 
 		cell.setCellStyle(style);

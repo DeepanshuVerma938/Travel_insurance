@@ -148,14 +148,6 @@ public class CarPage extends BasePage {
 
 	}
 
-	/*
-	 * public void getPage() { driver.get(
-	 * "https://ci.policybazaar.com/questions?ishome=true&isnew=true&utm_content=home_v11"
-	 * );
-	 * 
-	 * }
-	 */
-
 	public void buyCar() {
 		buycar.click();
 

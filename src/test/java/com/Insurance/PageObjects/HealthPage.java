@@ -151,35 +151,23 @@ public class HealthPage extends BasePage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='ped_last']//div[@class='chkbox']")));
 		noneofthese.click();
-		// unchecking whatsapp updates
-		// watsapp.click();
-		// clicking on continue button
-		// continuebtn5.click();
-
-	}
-
-	public void getInsuranceOption() {
-		// selecting no
-		// selectNo.click();
-		// clicking on view plans
-		// viewPlans.click();
 
 	}
 
 	public void displayHealthPlans() throws IOException {
-//		excelUtils.fillGreenColor(path, "Sheet2", 0, 0);
-//		excelUtils.fillBlueColor(path, "Sheet2", 0, 1);
+		excelUtils.setCellData(path, "Sheet2", 0, 0, "Policy Name");
+		excelUtils.setCellData(path, "Sheet2", 0, 1, "Policy Price");
 		System.out.println("Health Policy names:");
 		System.out.println("------------------------------------------------------");
 		for (int i = 0; i < 5; i++) {
 
 			try {
-//				String pname = policyName.get(i).getText();
-//				System.out.println("\n" + pname);
-//				excelUtils.setCellData(path, "Sheet2", i + 1, 0, pname);
+				String pname = policyName.get(i).getText();
+				System.out.println(pname);
+				excelUtils.setCellData(path, "Sheet2", i + 1, 0, pname);
 				String pprice = policyPrice.get(i).getText();
 				System.out.println(pprice);
-				excelUtils.setCellData(path, "Sheet2", i + 1, 0, pprice);
+				excelUtils.setCellData(path, "Sheet2", i + 1, 1, pprice);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

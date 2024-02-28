@@ -30,11 +30,6 @@ public class TravelInsurance {
 		tp.checkpage();
 	}
 
-//	@When("user entered the noneuropean country name")
-//	public void user_entered_the_noneuropean_country_name() {
-//		tp.selectcountry();
-//	}
-
 	@When("user entered the noneuropean {string} name")
 	public void user_entered_the_noneuropean_name(String string) {
 		tp.selectcountry(string);
@@ -60,11 +55,6 @@ public class TravelInsurance {
 	public void user_required_to_enter_medical_history_and_clicks_on_next_button() {
 		tp.setOption();
 	}
-
-//	@When("user redirected to contact details page and required to enter mobile number")
-//	public void user_redirected_to_contact_details_page_and_required_to_enter_mobile_number(String mo) {
-//		tp.setmobileNumber(mo);
-//	}
 
 	@When("user redirected to contact details page and required to enter {string} mobilenumber")
 	public void user_redirected_to_contact_details_page_and_required_to_enter_mobilenumber(String string) {

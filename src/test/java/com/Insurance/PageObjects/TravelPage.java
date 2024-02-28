@@ -122,7 +122,6 @@ public class TravelPage extends BasePage {
 	}
 
 	public void checkpage() {
-
 		String expectedheading = heading.getText();
 		Assert.assertEquals(actualheading, expectedheading);
 	}
@@ -207,6 +206,9 @@ public class TravelPage extends BasePage {
 
 	public void setOption() {
 		medicalHistory.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//*[@id='prequote-wrapper']/div[2]/div/div[2]/button")));
 		agenextbtn.click();
 
 	}
@@ -225,7 +227,7 @@ public class TravelPage extends BasePage {
 
 	public void applyFilter() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		studentPlan.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='modal-root']/div/div/span")));
@@ -257,10 +259,9 @@ public class TravelPage extends BasePage {
 	public void displayPolicies() throws IOException {
 
 		System.out.println("\nAll Travel Policy are displayed below :");
-//		excelUtils.fillGreenColor(fileName, "Sheet1", 0, 0);
-//		excelUtils.fillBlueColor(fileName, "Sheet1", 0, 1);
-//		excelUtils.fillGreenColor(fileName, "Sheet1", 0, 2);
-
+		excelUtils.setCellData(fileName, "Sheet1", 0, 0, "Company Name");
+		excelUtils.setCellData(fileName, "Sheet1", 0, 1, "Policy Name");
+		excelUtils.setCellData(fileName, "Sheet1", 0, 2, "Policy Price");
 		for (int i = 0; i < 3; i++) {
 
 			try {
@@ -278,8 +279,6 @@ public class TravelPage extends BasePage {
 			}
 
 		}
-
-		// storing values in excel Sheet
 
 	}
 
