@@ -1,8 +1,8 @@
 package com.Insurance.testRunner;
 
-//import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
+//import io.cucumber.junit.Cucumber;
+import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(features = { ".//Features/EToE.feature" }, glue = "com.travelInsurance.stepDefinitions", plugin = {
