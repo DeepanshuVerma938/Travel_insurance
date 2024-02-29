@@ -26,7 +26,7 @@ Feature: Insurance for students
     And user entered the invalid email & mobile number
     Then capture & display the error message
     
-  @sanity
+  
   Scenario:  Validation of user interaction with policybazzar site when user searches for Health Insurance plans
     When user click on policybazaar logo
     And user click on Health insurance navigated to health page
