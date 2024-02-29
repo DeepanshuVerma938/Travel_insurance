@@ -1,7 +1,6 @@
 Feature: Insurance for students
  
- 
-  Scenario: Travel insurance plan 
+  Scenario: Validation of user interaction with policybazzar site when user searches for Travel insurance plans  
     Given user navigate to policybazaar site
     When user click on travel insurance icon
     And user navigate to travelpolicybazaar webpage
@@ -19,7 +18,7 @@ Feature: Insurance for students
     	| Thailand  |   6396527359  |
     	
    
-  Scenario: Car Insurance Plan
+  Scenario: Validation of user interaction with policybazzar site when user searches for car insurance plans
     When user click on policybazaar logo
     And user click on car insurance and redirected to cipolicybazaar webpage
     And user selects  car issued city & RTO 
@@ -28,7 +27,7 @@ Feature: Insurance for students
     Then capture & display the error message
     
   @sanity
-  Scenario:  Health Insurance Plan
+  Scenario:  Validation of user interaction with policybazzar site when user searches for Health Insurance plans
     When user click on policybazaar logo
     And user click on Health insurance navigated to health page
     And user should select atleast one member for health insurance from available memebers

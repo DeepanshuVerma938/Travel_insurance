@@ -261,8 +261,11 @@ public class TravelPage extends BasePage {
 
 		System.out.println("\nAll Travel Policy are displayed below :");
 		excelUtils.setCellData(fileName, "Sheet1", 0, 0, "Company Name");
+		excelUtils.fillBlueColor(fileName, "Sheet1", 0, 0);
 		excelUtils.setCellData(fileName, "Sheet1", 0, 1, "Policy Name");
+		excelUtils.fillGreenColor(fileName, "Sheet1", 0, 1);
 		excelUtils.setCellData(fileName, "Sheet1", 0, 2, "Policy Price");
+		excelUtils.fillAquaColor(fileName, "Sheet1", 0, 2);
 		for (int i = 0; i < 3; i++) {
 
 			try {

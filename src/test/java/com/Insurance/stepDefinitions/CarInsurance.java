@@ -1,4 +1,4 @@
-package com.travelInsurance.stepDefinitions;
+package com.Insurance.stepDefinitions;
 
 import com.Insurance.PageObjects.CarPage;
 import com.Insurance.factory.BaseClass;

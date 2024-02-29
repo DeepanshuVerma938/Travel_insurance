@@ -1,7 +1,7 @@
 Feature: Regression testing for policybazaar site
 
   @regression
-  Scenario: Negative steps for Car Insurance
+  Scenario: Negative steps for user performs invalid actions on Car Insurance page
     Given user navigates to car insurance page
     And directly clicks view price
     Then user capture error
@@ -19,37 +19,37 @@ Feature: Regression testing for policybazaar site
   #| Aman       | 788abc@.com  |   7857456644 |
   
   @regression
-  Scenario: Negative steps for Health Insurance
+  Scenario: Validating the user actions when user selects only child without parent on Health Insurance Page
     Given user navigates to health insurance page
     And user selects only one child
     Then user should able to get error
 
   @regression
-  Scenario: Negative steps for Two wheeler Insurance
+  Scenario: Validating user invalid inputs for booking Two wheeler Insurance plans
     Given user navigates to two wheeler insurance page
     And user enters invalid number
     Then user get error message & not able to proceed further
 
   @regression
-  Scenario: Negative steps for child saving Insurance
+  Scenario: Validate user details when user selects child saving Insurance policies
     Given user navigates to child savings insurance page
     When user enters name and invalid number
     Then user should not allowed to proceed
 
   @regression
-  Scenario: Negative steps for Retirement Plan Insurance
+  Scenario: Validate user details when user selects different Retirement Insurance plans
     Given user navigates to Retirement plan insurance page
     When user fills invalid name and invalid number
     Then user able to view error message
 
   @regression
-  Scenario: Negative steps for Home Plan Insurance
+  Scenario: Validate user details when user selects different Home Insurance plans
     Given user navigates to Home Insurance plan page
     When user gives name and number as invalid
     Then user must see the invalid message
 
   @regression
-  Scenario: Negative steps for Home Plan Insurance
+  Scenario: Validate user details when user selects different Home Insurance plans
     Given user navigates to Home Insurance plan page
     When user gives name and number as invalid
     Then user must see the invalid message

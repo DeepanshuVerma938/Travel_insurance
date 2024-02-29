@@ -129,4 +129,24 @@ public class excelUtils {
 		fileInput.close();
 		fileOutput.close();
 	}
+
+	public static void fillAquaColor(String xlfile, String xlsheet, int rownum, int colnum) throws IOException {
+		fileInput = new FileInputStream(xlfile);
+		workBook = new XSSFWorkbook(fileInput);
+		workSheet = workBook.getSheet(xlsheet);
+		row = workSheet.getRow(rownum);
+		cell = row.getCell(colnum);
+
+		style = workBook.createCellStyle();
+
+		style.setFillForegroundColor(IndexedColors.AQUA.getIndex()); // Filling red color to the cell
+		style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+		cell.setCellStyle(style);
+		fileOutput = new FileOutputStream(xlfile);
+		workBook.write(fileOutput);
+		workBook.close();
+		fileInput.close();
+		fileOutput.close();
+	}
 }

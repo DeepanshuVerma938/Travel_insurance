@@ -1,4 +1,4 @@
-package com.travelInsurance.stepDefinitions;
+package com.Insurance.stepDefinitions;
 
 import java.io.IOException;
 import java.util.Properties;
